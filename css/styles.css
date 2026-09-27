@@ -77,3 +77,19 @@ svg.ar-icon{background:none!important;mask:none!important;-webkit-mask:none!impo
 body.modal-open{overflow:hidden}
 button:focus-visible,a:focus-visible{outline:3px solid rgba(8,127,120,.35);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Paid Ready Pack print isolation v24 */
+@media print{
+  @page{size:letter portrait;margin:.45in}
+  html,body{background:#fff!important;width:auto!important;height:auto!important;overflow:visible!important}
+  body>*{display:none!important}
+  main.builder{display:block!important;max-width:none!important;margin:0!important;padding:0!important;background:#fff!important;min-height:0!important}
+  main.builder>.section-head,main.builder>#message,main.builder>#actions{display:none!important}
+  #pack,#pack .full-ready-pack{display:block!important;width:100%!important;margin:0!important;padding:0!important}
+  #pack .pack-page{display:block!important;box-sizing:border-box!important;width:100%!important;max-width:none!important;min-height:0!important;margin:0!important;padding:.22in!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important;page-break-after:always!important;break-after:page!important}
+  #pack .pack-page:last-child{page-break-after:auto!important;break-after:auto!important}
+  #pack .pack-story-step,#pack .communication-card,#pack .pack-info-grid article,#pack .first-then-grid>div,#pack .handoff-row{break-inside:avoid!important;page-break-inside:avoid!important}
+  #pack .pack-scene{max-height:3in!important}
+  #pack .pack-title-page{min-height:9.6in!important}
+  a[href]:after{content:none!important}
+}

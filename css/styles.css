@@ -172,3 +172,7 @@ img.experience-art{display:block;object-fit:cover;background:#f4faf9;border:0}
 .step-pictogram.communicate:before{content:"…";font-size:30px;font-weight:900;color:#13283f;background:#fff;border:2px solid #13283f;border-radius:12px;padding:0 6px;line-height:20px}
 .step-pictogram.care:before{content:"+";font-size:31px;font-weight:900;color:#087f78}
 .step-pictogram.custom{background:#dff3f0}
+
+/* Never-empty schedule visuals v34 */
+.step-pictogram.next:before{content:"→";font-size:30px;font-weight:900;color:#087f78}
+.step-pictogram.next:after{content:"";position:absolute;width:30px;height:30px;border:2px solid #9fc8c4;border-radius:9px}

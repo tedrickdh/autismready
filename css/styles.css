@@ -72,3 +72,8 @@ svg.ar-icon{background:none!important;mask:none!important;-webkit-mask:none!impo
 .question input:focus,.question textarea:focus,.question select:focus{outline:3px solid rgba(8,127,120,.16);border-color:#087f78}
 .unlock-btn:disabled{opacity:.7;cursor:not-allowed}
 @media print{header.nav,footer,.close,.progress,.pack-toolbar,.locked-product{display:none!important}}
+
+/* QA accessibility pass v20 */
+body.modal-open{overflow:hidden}
+button:focus-visible,a:focus-visible{outline:3px solid rgba(8,127,120,.35);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

@@ -138,3 +138,7 @@ html{scroll-padding-top:76px}.hero,.builder{scroll-margin-top:76px}
  .hero-product{margin-top:18px!important}
  .experience-art{height:112px!important}
 }
+
+/* Safari-safe scene image delivery v31 */
+img.experience-art{display:block;object-fit:cover;background:#f4faf9;border:0}
+@media(max-width:620px){img.experience-art{object-fit:cover!important}}

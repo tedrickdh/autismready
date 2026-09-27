@@ -119,3 +119,12 @@ button:focus-visible,a:focus-visible{outline:3px solid rgba(8,127,120,.35);outli
   .experience-art use{vector-effect:non-scaling-stroke}
 }
 @media(max-width:390px){.cards{grid-template-columns:1fr!important}.experience-art{height:auto!important;aspect-ratio:120/72!important}}
+
+/* iPhone sticky-header anchor/hero repair v29 */
+html{scroll-padding-top:76px}.hero,.builder{scroll-margin-top:76px}
+@media(max-width:620px){
+ html{scroll-padding-top:64px}.hero,.builder{scroll-margin-top:64px}
+ .hero{padding-top:42px!important}
+ .hero h1{font-size:clamp(46px,13vw,58px)!important;line-height:.94!important;margin-top:14px!important}
+ .eyebrow{margin-top:0}
+}

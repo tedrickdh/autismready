@@ -176,3 +176,47 @@ img.experience-art{display:block;object-fit:cover;background:#f4faf9;border:0}
 /* Never-empty schedule visuals v34 */
 .step-pictogram.next:before{content:"→";font-size:30px;font-weight:900;color:#087f78}
 .step-pictogram.next:after{content:"";position:absolute;width:30px;height:30px;border:2px solid #9fc8c4;border-radius:9px}
+
+/* Mobile Safari print typography repair v35 */
+@media print{
+ html,body,#pack,#pack .full-ready-pack,#pack .pack-page{
+   -webkit-text-size-adjust:100%!important;
+   text-size-adjust:100%!important;
+ }
+ #pack .pack-page{
+   height:auto!important;
+   min-height:9.7in!important;
+   max-height:none!important;
+   overflow:visible!important;
+ }
+ #pack .story-page .pack-story-list{
+   display:grid!important;
+   grid-template-columns:1fr!important;
+   gap:.06in!important;
+ }
+ #pack .story-page .visual-step{
+   display:grid!important;
+   grid-template-columns:.42in .3in minmax(0,1fr)!important;
+   width:100%!important;
+   min-width:0!important;
+ }
+ #pack .story-page .visual-step>div:last-child{
+   display:block!important;
+   min-width:0!important;
+   width:auto!important;
+ }
+ #pack .story-page .visual-step b,
+ #pack .story-page .visual-step p,
+ #pack .schedule-page span,
+ #pack .handoff-compact p{
+   display:block!important;
+   width:auto!important;
+   max-width:none!important;
+   white-space:normal!important;
+   word-break:normal!important;
+   overflow-wrap:normal!important;
+   letter-spacing:normal!important;
+ }
+ #pack .story-page .visual-step b{font-size:10pt!important;line-height:1.2!important}
+ #pack .story-page .visual-step p{font-size:9pt!important;line-height:1.25!important}
+}

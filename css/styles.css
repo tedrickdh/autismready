@@ -142,3 +142,24 @@ html{scroll-padding-top:76px}.hero,.builder{scroll-margin-top:76px}
 /* Safari-safe scene image delivery v31 */
 img.experience-art{display:block;object-fit:cover;background:#f4faf9;border:0}
 @media(max-width:620px){img.experience-art{object-fit:cover!important}}
+
+.print-tip{margin:12px 0 0;color:#536777;font-size:13px}
+#pack .pack-scene{display:block;object-fit:contain}
+@media(max-width:620px){
+#pack .pack-page{padding:22px 16px!important}
+#pack .visual-step{grid-template-columns:54px minmax(0,1fr)!important;gap:12px!important;align-items:start!important}
+#pack .visual-step>div:last-child{min-width:0!important}
+#pack .visual-step b,#pack .visual-step p{white-space:normal!important;word-break:normal!important;width:auto!important}
+#pack .visual-step p{font-size:15px!important;line-height:1.45!important}
+}
+@media print{
+@page{size:letter portrait;margin:.4in}
+#pack .pack-page{height:9.95in!important;min-height:9.95in!important;max-height:9.95in!important;overflow:hidden!important;padding:.18in!important}
+#pack .story-page .pack-story-list{grid-template-columns:1fr 1fr!important;gap:.08in!important}
+#pack .story-page .visual-step{grid-template-columns:.42in .3in minmax(0,1fr)!important;gap:.07in!important;padding:.08in!important}
+#pack .story-page .visual-step b{font-size:9.5pt!important}
+#pack .story-page .visual-step p{font-size:8.5pt!important;line-height:1.18!important}
+#pack .schedule-page .visual-schedule{grid-template-columns:1fr 1fr!important;gap:.08in!important}
+#pack .tools-page .communication-card-grid{grid-template-columns:1fr 1fr!important}
+#pack .support-page .pack-info-grid,#pack .support-page .handoff-compact{grid-template-columns:1fr 1fr!important}
+}

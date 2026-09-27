@@ -8,6 +8,7 @@ export async function onRequestPost({ request, env }) {
   form.set("success_url",origin+"/success.html?session_id={CHECKOUT_SESSION_ID}");
   form.set("cancel_url",origin+"/?checkout=cancelled");
   form.set("allow_promotion_codes","true");
+  form.set("metadata[product]","autismready_complete_ready_pack");
   const r=await fetch("https://api.stripe.com/v1/checkout/sessions",{method:"POST",headers:{Authorization:"Bearer "+env.STRIPE_SECRET_KEY,"Content-Type":"application/x-www-form-urlencoded"},body:form.toString()});
   const d=await r.json();
   if(!r.ok||!d.url){const message=d&&d.error&&d.error.message?d.error.message:"Unable to start checkout.";return reply({error:message},502);}

@@ -10,7 +10,7 @@ export async function onRequestPost({ request, env }) {
   form.set("allow_promotion_codes","true");
   const r=await fetch("https://api.stripe.com/v1/checkout/sessions",{method:"POST",headers:{Authorization:"Bearer "+env.STRIPE_SECRET_KEY,"Content-Type":"application/x-www-form-urlencoded"},body:form.toString()});
   const d=await r.json();
-  if(!r.ok||!d.url)return reply({error:"Unable to start checkout."},502);
+  if(!r.ok||!d.url){const message=d&&d.error&&d.error.message?d.error.message:"Unable to start checkout.";return reply({error:message},502);}
   return reply({url:d.url},200);
 }
 function reply(x,status){return new Response(JSON.stringify(x),{status,headers:{"Content-Type":"application/json","Cache-Control":"no-store"}})}

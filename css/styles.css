@@ -128,3 +128,13 @@ html{scroll-padding-top:76px}.hero,.builder{scroll-margin-top:76px}
  .hero h1{font-size:clamp(46px,13vw,58px)!important;line-height:.94!important;margin-top:14px!important}
  .eyebrow{margin-top:0}
 }
+
+/* Storefront visual optimization v30 */
+.experience-art{background:#f4faf9}.experience{will-change:transform}.experience strong{color:#13283f!important}.hero-scene{background:#eef8f7!important}
+@media(max-width:620px){
+ .hero{padding-bottom:46px!important}.hero-copy{width:100%}.hero h1{max-width:620px;margin-left:auto!important;margin-right:auto!important}
+ .hero-lead{max-width:560px!important}.hero-sub{max-width:590px!important}
+ .trust-row{font-size:12px!important;gap:8px 13px!important}
+ .hero-product{margin-top:18px!important}
+ .experience-art{height:112px!important}
+}

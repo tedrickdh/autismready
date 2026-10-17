@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "AutismReady",
+    "slug": "autismready",
+    "scheme": "autismready",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tedrickdh.autismready"
+    },
+    "android": {
+      "package": "com.tedrickdh.autismready"
+    }
+  }
+}
